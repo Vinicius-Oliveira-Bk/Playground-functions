@@ -33,28 +33,16 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(higuestNumber) {
   // seu código aqui
-  let greater = higuestNumber[0];
-  let result = 0;
+  let greater = Math.max.apply(null, higuestNumber);
+  let counts = 0;
 
-  for (let index = 0; index <= higuestNumber.length; index += 1) {
-    if (higuestNumber[index] > greater) {
-      greater = higuestNumber[index];
-    }
-    if (greater === higuestNumber[index]) {
-      result += 1;
+  for (let index = 0; index < higuestNumber.length; index += 1) {
+    if (higuestNumber[index] === greater) {
+      counts += 1;
     }
   }
 
-  return result;
-  /*let counts = {};
-  higuestNumber.forEach((count) => {
-    counts[count] = (counts[count] || 0) + 1;
-  });
-
-  const maxVal = Math.max(...Object.values(counts))
-  const num = Object.keys(counts).find((key) => counts[key] === maxVal);
-
-  return num;*/
+  return counts;
 }
 
 // Desafio 7
@@ -70,7 +58,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return warning;
 }
-console.log(catAndMouse(1, 4, 4));
 
 // Desafio 8
 function fizzBuzz() {
