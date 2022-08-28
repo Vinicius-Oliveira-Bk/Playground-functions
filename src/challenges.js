@@ -1,3 +1,5 @@
+/* eslint-disable complexity */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
@@ -75,16 +77,36 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringReceived) {
   // seu código aqui
+  let string1 = stringReceived.replace(/a/gi, '1');
+  let string2 = string1.replace(/e/gi, '2');
+  let string3 = string2.replace(/i/gi, '3');
+  let string4 = string3.replace(/o/gi, '4');
+  let string5 = string4.replace(/u/gi, '5');
+
+  return string5;
 }
-function decode() {
+
+function decode(string5) {
   // seu código aqui
+  let stringDecoder1 = string5.replace(/1/gi, 'a');
+  let stringDecoder2 = stringDecoder1.replace(/2/gi, 'e');
+  let stringDecoder3 = stringDecoder2.replace(/3/gi, 'i');
+  let stringDecoder4 = stringDecoder3.replace(/4/gi, 'o');
+  let stringDecoder5 = stringDecoder4.replace(/5/gi, 'u');
+
+  return stringDecoder5;
 }
 
 // Desafio 10
-function techList() {
+function techList(techNames, name) {
   // seu código aqui
+  let objectOfTechs = {};
+
+  for (let index = 0; index < techNames.length; index += 1) {
+
+  }
 }
 
 module.exports = {
